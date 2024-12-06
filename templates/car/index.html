@@ -1,10 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
-
+{%  extends "base.html" %}
+{% block content %}
+  <body>
+    <div class="header-one">
+      <div class="jumbotron text-center" >
+        <h1 class="title-one">Check Your Car</h1>
+        <br>
+        <p class="title-two">Ensure that a vehicle is in optimal condition. </p> 
+      </div>
+    </div>
+    <!-- Tabs -->
+    <section id="tabs">
+	    <div class="container">
+		    <h6 class="section-title h1">What You Need to Know</h6>
+		  <div class="row">
+			<div class="col-xs-12 ">
+				<nav>
+					<div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+						<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">BODY CHECK</a>
+						<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">ONLINE CHECK</a>
+						<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">DIAGNOSYS</a>
+					</div>
+				</nav>
+				<div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+					<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            A body check of a car focuses on evaluating the structural and cosmetic condition of the vehicle's bodywork to detect issues such as previous damage, poor repairs, rust, or hidden problems. Thickness measurement is a critical part of this process and involves using a paint thickness gauge to assess the uniformity of the paint layer on the car.					</div>
+					<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+            Online car checks using the VIN code are an essential tool for buyers, sellers, and car owners to verify the history, condition, and legal status of a vehicle. The VIN (Vehicle Identification Number) is a unique 17-character code assigned to every vehicle at the time of manufacture. It serves as a fingerprint, providing essential information about the car’s background, including its manufacturer, model, year of production, and history.
+					</div>
+					<div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+						Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.
+					</div>
+				</div>
+			</div>
+		  </div>
+	  </div>
+  </section>
 </body>
-</html>
+{% endblock %}
