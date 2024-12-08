@@ -1,10 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+{% extends "base.html" %}
+{% block sidebar %}
+<div class="sidebar">
+  <ul class="nav justify-content-end navbar-dark">
+    <li class="nav-item">
+      <a class="nav-link home-link" href="{% url "car:index" %}">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link home-link" href="#">Find Your Vehicle</a>
+    </li>
+    <li class="nav-item">
+      {% if user.is_authenticated %}
+        <li class="nav-link home-link"><a class="home-link" href="{{ user.get_absolute_url }}">{{ user.get_username }}</a></li>
+        <li class="nav-link home-link"><a class="home-link" href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
+      {% else %}
+        <li class="nav-link home-link"><a class="home-link" href="{% url 'login'%}?next={{request.path}}">Login</a></li>
+      {% endif %}
+    </li>
+  </ul>
+</div>
+{% endblock %}
