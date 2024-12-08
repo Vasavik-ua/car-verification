@@ -12,9 +12,9 @@
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <link href="{% static 'css/style_index.css' %}" rel="stylesheet">
-  <link href="{% static 'css/style_carlist.css' %}" rel="stylesheet">
-  <link href="{% static 'css/style_cardet.css' %}" rel="stylesheet">
+  <link href="{% static "css/style.css" %}" rel="stylesheet">
+{#  <link href="{% static 'css/style_carlist.css' %}" rel="stylesheet">#}
+{#  <link href="{% static 'css/style_cardet.css' %}" rel="stylesheet">#}
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 
@@ -23,7 +23,7 @@
    {% include "includes/sidebar.html" %}
 {% endblock %}
 {% block content %} {% endblock %}
-{% block pagination %}
-  {% include "includes/pagination.html" %}  
-{% endblock %}
+{#{% block pagination %}#}
+{#  {% include "includes/pagination.html" %}  #}
+{#{% endblock %}#}
 </html>
