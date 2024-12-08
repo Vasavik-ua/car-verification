@@ -1,10 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
+{% load query_search_pagination %} 
+{% if is_paginated %}
+  <div class="pagination-container">
+    <nav aria-label="Page navigation">
+      <ul class="pagination justify-content-end">
+        {% if page_obj.has_previous %}
+          <li class="page-item">
+            <a class="page-link" href="?{% query_search_pagination request page=page_obj.previous_page_number %}">
+              <i class="fa fa-angle-left"></i> Prev
+            </a>
+          </li>
+        {% else %}
+          <li class="page-item disabled">
+            <span class="page-link"><i class="fa fa-angle-left"></i> Prev</span>
+          </li>
+        {% endif %}
 
-</body>
-</html>
+        {% for page_num in paginator.page_range %}
+          {% if page_num == page_obj.number %}
+            <li class="page-item active">
+              <span class="page-link">{{ page_num }}</span>
+            </li>
+          {% else %}
+            <li class="page-item">
+              <a class="page-link" href="?{% query_search_pagination request page=page_num %}">{{ page_num }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+
+        {% if page_obj.has_next %}
+          <li class="page-item">
+            <a class="page-link" href="?{% query_search_pagination request page=page_obj.next_page_number %}">
+              Next <i class="fa fa-angle-right"></i>
+            </a>
+          </li>
+        {% else %}
+          <li class="page-item disabled">
+            <span class="page-link">Next <i class="fa fa-angle-right"></i></span>
+          </li>
+        {% endif %}
+      </ul>
+    </nav>
+  </div>
+{% endif %}
