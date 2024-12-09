@@ -1,10 +1,102 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
+  <div>
+    <h1 class="title-one text-center">{{ cars.mark }}  {{ cars.model }} WIN: {{ cars.win_code }}</h1>
+  </div>
 
-</body>
-</html>
+<nav class="bg-dark navbar-dark">
+  <div class="container">
+    <a href="" class="navbar-brand"></a>
+  </div>
+</nav>
+  
+<section id="gallery">
+  <div class="container">
+    <div class="row">
+    <div class="col-lg-4 mb-4">
+    <div class="card">
+      <img src="/static/images/checkstatus.png" alt="" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">CHECK STATUS</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
+       <a href="{% url "cars:check-status" pk=cars.info_cars.id %}" class="btn btn-outline-success btn-sm">Find More</a>
+      </div>
+     </div>
+    </div>
+  <div class="col-lg-4 mb-4">
+  <div class="card">
+      <img src="/static/images/carowner.png" alt="" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">CAR OWNER</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
+       <a href="{% url "cars:car-owner" pk=cars.info_cars.owner.id %}" class="btn btn-outline-success btn-sm">Find More</a>
+      </div>
+      </div>
+    </div>
+    <div class="col-lg-4 mb-4">
+    <div class="card">
+      <img src="/static/images/carcomments.png" alt="" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">COMMENTS</h5>
+        <p class="card-text">{{ cars.info_cars.comments }}</p>
+
+      </div>
+     </div>
+    </div>
+  </div>
+</div>
+</section>
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+{#  <div class="row">#}
+{#  <div class="col-md-6">#}
+{#    <div class="card">#}
+{#      <div class="card-header">#}
+{#        <h4 class="card-title">Check Status</h4>#}
+{#        <p class="category">#}
+{#          <a href="{% url "cars:check-status" pk=cars.info_cars.id %}">More Info</a>#}
+{#        </p>#}
+{#      </div>#}
+{#      <div class="card-body">#}
+{#        The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Barcelona...#}
+{#      </div>#}
+{#    </div>#}
+{#  </div>#}
+{#  <div class="col-md-6">#}
+{#    <div class="card">#}
+{#      <div class="card-header">#}
+{#        <h4 class="card-title">Car Owner</h4>#}
+{#        <p class="category">#}
+{#          <a href="{% url "cars:car-owner" pk=cars.info_cars.owner.id %}">Owner</a>#}
+{#        </p>#}
+{#      </div>#}
+{#      <div class="card-body">#}
+{#        The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Barcelona...#}
+{#      </div>#}
+{#    </div>#}
+{#  </div>#}
+{#  <div class="col-md-6">#}
+{#    <div class="card">#}
+{#      <div class="card-header">#}
+{#        <h4 class="card-title">Comments by Car</h4>#}
+{#      </div>#}
+{#      <div class="card-body">#}
+{#        {{ cars.info_cars.comments }}#}
+{#      </div>#}
+{#    </div>#}
+{#  </div>#}
+{#  </div>#}
+{% endblock %}
