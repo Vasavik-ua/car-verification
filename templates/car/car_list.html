@@ -35,7 +35,7 @@
         <td>{{ car.win_code }}</td>
         <td><a href="{%  url "car:car-detail" pk=car.id %}"><i class="act-alg icon-align fa fa-search "></i></a></td>
         <td>
-          <a href="#"><i class="act-alg fa fa-pencil-alt"></i></a>
+          <a href="{% url "car:car-update" pk=car.id %}"><i class="act-alg fa fa-pencil-alt"></i></a>
           <a href="#"><i class="act-alg fa fa-times"></i></a>
         </td>
       </tr>
