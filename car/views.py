@@ -1,7 +1,7 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic import ListView, DetailView, UpdateView
+from django.views.generic import ListView, DetailView, UpdateView, DeleteView, CreateView
 
 from car.forms import CarSearchWinForm
 from car.models import Car, InfoCar
@@ -38,6 +38,17 @@ class CarDetailView(LoginRequiredMixin, DetailView):
 
 
 class CarUpdateView(LoginRequiredMixin, UpdateView):
+    model = Car
+    fields = "__all__"
+    success_url = reverse_lazy("car:car_list")
+
+
+class CarDeleteView(LoginRequiredMixin, DeleteView):
+    model = Car
+    success_url = reverse_lazy("car:car_list")
+
+
+class CarCreateView(LoginRequiredMixin, CreateView):
     model = Car
     fields = "__all__"
     success_url = reverse_lazy("car:car_list")
