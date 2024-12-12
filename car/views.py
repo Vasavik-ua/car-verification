@@ -3,8 +3,8 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView, CreateView
 
-from car.forms import CarSearchWinForm
-from car.models import Car, InfoCar
+from car.forms import CarSearchWinForm, CarSearchCheckUp
+from car.models import Car, InfoCar, CheckUpCar
 
 
 def index(request):
@@ -52,3 +52,9 @@ class CarCreateView(LoginRequiredMixin, CreateView):
     model = Car
     fields = "__all__"
     success_url = reverse_lazy("car:car_list")
+
+
+class CarCheckupDetailView(LoginRequiredMixin, DetailView):
+    model = InfoCar
+    template_name = "car/car_checkup_list.html"
+    context_object_name = "checkups"
