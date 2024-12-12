@@ -1,10 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+{% block content %}
+  <div class="text-center">
+    <h1 class="title-one">You ' re Looking All CheckUps</h1>
+  </div>
+  <nav class="bg-dark navbar-dark">
+    <div class="container">
+      <a href="" class="navbar-brand"></a>
+    </div>
+  </nav>
+  <div class="butcheck">
+    <div class="button">
+      <a class="btn btn-primary btn-bk" href="{% url "car:car-create" %}">CREATE NEW CHECKUP</a>
+    </div>
+  </div>
+  <br>
+<div class="container">
+  <table class="table table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        <th>Data of execution</th>
+        <th>Performed By</th>
+        <th>Kilometers</th>
+        <th>Body State</th>
+        <th>Health Check</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for check in checkups.checkups.all %}
+      <tr>
+        <td>{{ check.data_of_execution }}</td>
+        <td><a href="#">{{ check.performed_by }}</a></td>
+        <td>{{  check.kilometers }}</td>
+        <td>{{  check.body_state }}</td>
+        <td>{{  check.health_check }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
