@@ -56,5 +56,24 @@ class CarCreateView(LoginRequiredMixin, CreateView):
 
 class CarCheckupDetailView(LoginRequiredMixin, DetailView):
     model = InfoCar
-    template_name = "car/car_checkup_list.html"
+    template_name = "car/checkup_detail.html"
     context_object_name = "checkups"
+
+
+class CheckUpCreateView(LoginRequiredMixin, CreateView):
+    model = CheckUpCar
+    fields = "__all__"
+    template_name = "car/checkup_form.html"
+    # success_url = reverse_lazy("car:car-checkup")
+
+
+class CheckUpUpdateView(LoginRequiredMixin, UpdateView):
+    model = CheckUpCar
+    fields = "__all__"
+    template_name = "car/checkup_form.html"
+    # success_url =
+
+
+class CheckUpDeleteView(LoginRequiredMixin, DeleteView):
+    model = CheckUpCar
+    template_name = "car/checkup_confirm_delete.html"
