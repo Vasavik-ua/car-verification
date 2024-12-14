@@ -11,7 +11,7 @@
   </nav>
   <div class="butcheck">
     <div class="button">
-      <a class="btn btn-primary btn-bk" href="{% url "car:car-create" %}">CREATE NEW CHECKUP</a>
+      <a class="btn btn-primary btn-bk" href="{% url "car:checkup-create" %}">CREATE NEW CHECKUP</a>
     </div>
   </div>
   <br>
@@ -24,6 +24,7 @@
         <th>Kilometers</th>
         <th>Body State</th>
         <th>Health Check</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
@@ -34,6 +35,10 @@
         <td>{{  check.kilometers }}</td>
         <td>{{  check.body_state }}</td>
         <td>{{  check.health_check }}</td>
+        <td>
+          <a href="#"><i class="act-alg fa fa-pencil-alt"></i></a>
+          <a href="#"><i class="act-alg fa fa-times"></i></a>
+        </td>
       </tr>
     {% endfor %}
     </tbody>
