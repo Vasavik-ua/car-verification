@@ -36,8 +36,8 @@
         <td>{{  check.body_state }}</td>
         <td>{{  check.health_check }}</td>
         <td>
-          <a href="#"><i class="act-alg fa fa-pencil-alt"></i></a>
-          <a href="#"><i class="act-alg fa fa-times"></i></a>
+          <a href="{% url "car:checkup-update" pk=check.id %}"><i class="act-alg fa fa-pencil-alt"></i></a>
+          <a href="{% url "car:checkup-delete" pk=check.id %}"><i class="act-alg fa fa-times"></i></a>
         </td>
       </tr>
     {% endfor %}
