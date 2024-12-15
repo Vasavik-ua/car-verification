@@ -4,7 +4,7 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView, CreateView
 
 from car.forms import CarSearchWinForm, CarSearchCheckUp
-from car.models import Car, InfoCar, CheckUpCar
+from car.models import Car, InfoCar, CheckUpCar, CarOwner
 
 
 def index(request):
@@ -77,3 +77,9 @@ class CheckUpUpdateView(LoginRequiredMixin, UpdateView):
 class CheckUpDeleteView(LoginRequiredMixin, DeleteView):
     model = CheckUpCar
     template_name = "car/checkup_confirm_delete.html"
+
+
+class CarOwnerDetailView(LoginRequiredMixin, DetailView):
+    model = InfoCar
+    # context_object_name = "carowner"
+    template_name = "car/car_owner.html"
