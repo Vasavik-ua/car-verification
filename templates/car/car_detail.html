@@ -18,7 +18,7 @@
       <div class="card-body">
         <h5 class="card-title">CHECK STATUS</h5>
         <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
-       <a href="{% url "car:car-checkup" pk=car.info_cars.id%}" class="btn btn-outline-success btn-sm">Find More</a>
+       <a href="{% url "car:car-checkup" pk=car.info_cars.id %}" class="btn btn-outline-success btn-sm">Find More</a>
       </div>
      </div>
     </div>
@@ -28,7 +28,7 @@
       <div class="card-body">
         <h5 class="card-title">CAR OWNER</h5>
         <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
-       <a href="#" class="btn btn-outline-success btn-sm">Find More</a>
+       <a href="{% url "car:car-owner-detail" pk=car.info_cars.id %}" class="btn btn-outline-success btn-sm">Find More</a>
       </div>
       </div>
     </div>
