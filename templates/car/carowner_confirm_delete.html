@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
 
-</body>
-</html>
+{% block content %}
+  <h1 class="title-one">Are you shore to delete CarOwner?</h1>
+  <nav class="bg-dark navbar-dark">
+    <div class="container">
+      <a href="" class="navbar-brand"></a>
+    </div>
+  </nav>
+  <form action="" method="post" >
+    {% csrf_token %}
+    <input type="submit" value="Yes" class="btn btn-danger">
+  </form>
+{% endblock %}
