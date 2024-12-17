@@ -1,10 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+{% block content %}
+  <div class="text-center">
+    <h1 class="title-one">You' re Looking Company CheckUp</h1>
+  </div>
+  <nav class="bg-dark navbar-dark">
+    <div class="container">
+      <a href="" class="navbar-brand"></a>
+    </div>
+  </nav>
+  <div class="butcheck">
+    <div class="button">
+      <a class="btn btn-primary btn-bk" href="{% url "car:company-create" %}">CREATE NEW COMPANY</a>
+    </div>
+  </div>
+  <br>
+  <div class='container-fluid'>
+        <div class="card mx-auto col-md-3 col-10 mt-5 pt-4">
+            <div class="d-flex sale ">
+                <div class="btn">UPDATE</div>
+            </div>
+            <img class='mx-auto img-thumbnail'
+                src="/static/images/company1.png"
+                width="auto" height="auto"/>
+            <div class="card-body text-center mx-auto">
+                <h5 class="card-title">Company Name: {{ checkupcar.performed_by.first_name }}</h5>
+                <h5 class="card-title">Come from: {{ checkupcar.performed_by.country }}</h5>
+            </div>
+        </div>
 
-</body>
-</html>
+    </div>
+{% endblock %}
