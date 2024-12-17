@@ -31,7 +31,7 @@
     {% for check in checkups.checkups.all %}
       <tr>
         <td>{{ check.data_of_execution }}</td>
-        <td><a href="#">{{ check.performed_by }}</a></td>
+        <td><a href="{% url "car:company-detail" pk=check.performed_by.id %}">{{ check.performed_by }}</a></td>
         <td>{{  check.kilometers }}</td>
         <td>{{  check.body_state }}</td>
         <td>{{  check.health_check }}</td>
