@@ -1,7 +1,8 @@
 from django.urls import path
 
 from car.views import index, CarListView, CarDetailView, CarUpdateView, CarDeleteView, CarCreateView, \
-    CarCheckupDetailView, CheckUpCreateView, CheckUpUpdateView, CheckUpDeleteView, CarOwnerDetailView
+    CarCheckupDetailView, CheckUpCreateView, CheckUpUpdateView, CheckUpDeleteView, CarOwnerDetailView, \
+    CarOwnerCreateView, CarOwnerUpdateView, CarOwnerDeleteView, CompanyCheckUpDetailView, CompanyCheckUpCreateView
 
 urlpatterns = [
     path("", index, name="index"),
@@ -14,7 +15,12 @@ urlpatterns = [
     path("car/checkup/create/", CheckUpCreateView.as_view(), name="checkup-create"),
     path("car/checkup/<int:pk>/update/", CheckUpUpdateView.as_view(), name="checkup-update"),
     path("car/checkup/<int:pk>/delete/", CheckUpDeleteView.as_view(), name="checkup-delete"),
-    path("car/<int:pk>/owner", CarOwnerDetailView.as_view(), name="car-owner-detail")
+    path("car/<int:pk>/owner", CarOwnerDetailView.as_view(), name="car-owner-detail"),
+    path("car/owner/create/", CarOwnerCreateView.as_view(), name="owner-create"),
+    path("car/owner/<int:pk>/update/", CarOwnerUpdateView.as_view(), name="owner-update"),
+    path("car/owner/<int:pk>/delete/", CarOwnerDeleteView.as_view(), name="owner-delete"),
+    path("car/checkup/company/<int:pk>", CompanyCheckUpDetailView.as_view(), name="company-detail"),
+    path("car/checkup/company/create/", CompanyCheckUpCreateView.as_view(), name="company-create")
 
 ]
 
