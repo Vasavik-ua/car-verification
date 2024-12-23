@@ -2,7 +2,8 @@ from django.urls import path
 
 from car.views import index, CarListView, CarDetailView, CarUpdateView, CarDeleteView, CarCreateView, \
     CarCheckupDetailView, CheckUpCreateView, CheckUpUpdateView, CheckUpDeleteView, CarOwnerDetailView, \
-    CarOwnerCreateView, CarOwnerUpdateView, CarOwnerDeleteView, CompanyCheckUpDetailView, CompanyCheckUpCreateView
+    CarOwnerCreateView, CarOwnerUpdateView, CarOwnerDeleteView, CompanyCheckUpDetailView, CompanyCheckUpCreateView, \
+    CompanyCheckUpUpdateView
 
 urlpatterns = [
     path("", index, name="index"),
@@ -20,8 +21,8 @@ urlpatterns = [
     path("car/owner/<int:pk>/update/", CarOwnerUpdateView.as_view(), name="owner-update"),
     path("car/owner/<int:pk>/delete/", CarOwnerDeleteView.as_view(), name="owner-delete"),
     path("car/checkup/company/<int:pk>", CompanyCheckUpDetailView.as_view(), name="company-detail"),
-    path("car/checkup/company/create/", CompanyCheckUpCreateView.as_view(), name="company-create")
-
+    path("car/checkup/company/create/", CompanyCheckUpCreateView.as_view(), name="company-create"),
+    path("car/checkup/company/update/<int:pk>/", CompanyCheckUpUpdateView.as_view(), name="company-update")
 ]
 
 app_name = "car"
