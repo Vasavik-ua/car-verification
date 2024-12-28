@@ -14,16 +14,16 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link href="{% static "css/style.css" %}" rel="stylesheet">
   <link href="{% static 'css/style_carlist.css' %}" rel="stylesheet">
-{#  <link href="{% static 'css/style_cardet.css' %}" rel="stylesheet">#}
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 
-
-{% block sidebar %}
-   {% include "includes/sidebar.html" %}
-{% endblock %}
-{% block content %} {% endblock %}
-{#{% block pagination %}#}
-{#  {% include "includes/pagination.html" %}  #}
-{#{% endblock %}#}
+<body>
+  {% block sidebar %}
+     {% include "includes/sidebar.html" %}
+  {% endblock %}
+  {% block content %} {% endblock %}
+  {% block pagination %}
+    {% include "includes/pagination.html" %}  
+  {% endblock %}
+</body>
 </html>
