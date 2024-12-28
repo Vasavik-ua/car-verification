@@ -3,46 +3,46 @@
   <div>
     <h1 class="title-one text-center">{{ car.mark }}  {{ car.model }} WIN: {{ car.win_code }}</h1>
   </div>
-<nav class="bg-dark navbar-dark">
-  <div class="container">
-    <a href="" class="navbar-brand"></a>
-  </div>
-</nav>
+  <nav class="bg-dark navbar-dark">
+    <div class="container">
+      <a href="" class="navbar-brand"></a>
+    </div>
+  </nav>
   
-<section id="gallery">
-  <div class="container">
-    <div class="row">
+  <section id="gallery">
+    <div class="container">
+      <div class="row">
+      <div class="col-lg-4 mb-4">
+      <div class="card">
+        <img src="/static/images/checkstatus.png" alt="" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">CHECK STATUS</h5>
+          <p class="card-text">Regularly checking the status of your car is a fundamental step in ensuring its reliability, safety, and longevity. A car is more than just a mode of transportation—it's an investment, and maintaining it well can save you time, money, and unnecessary stress.</p>
+         <a href="{% url "car:car-checkup" pk=car.info_cars.id %}" class="btn btn-outline-success btn-sm">Find More</a>
+        </div>
+       </div>
+      </div>
     <div class="col-lg-4 mb-4">
     <div class="card">
-      <img src="/static/images/checkstatus.png" alt="" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">CHECK STATUS</h5>
-        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
-       <a href="{% url "car:car-checkup" pk=car.info_cars.id %}" class="btn btn-outline-success btn-sm">Find More</a>
+        <img src="/static/images/carowner.png" alt="" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">CAR OWNER</h5>
+          <p class="card-text">Understanding the ownership history of a car is a critical step in making an informed purchase. The car's previous owner(s) can reveal valuable insights into how the vehicle was maintained, its usage patterns, and any potential hidden issues.</p>
+         <a href="{% url "car:car-owner-detail" pk=car.info_cars.id %}" class="btn btn-outline-success btn-sm">Find More</a>
+        </div>
+        </div>
       </div>
-     </div>
-    </div>
-  <div class="col-lg-4 mb-4">
-  <div class="card">
-      <img src="/static/images/carowner.png" alt="" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">CAR OWNER</h5>
-        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
-       <a href="{% url "car:car-owner-detail" pk=car.info_cars.id %}" class="btn btn-outline-success btn-sm">Find More</a>
+      <div class="col-lg-4 mb-4">
+      <div class="card">
+        <img src="/static/images/carcomments.png" alt="" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">COMMENTS</h5>
+          <p class="card-text">Vehicle country location:  {{ car.info_cars.country_location }}</p>
+          <p class="card-text">Vehicle city location:     {{ car.info_cars.city_location }}</p>
+        </div>
+       </div>
       </div>
-      </div>
-    </div>
-    <div class="col-lg-4 mb-4">
-    <div class="card">
-      <img src="/static/images/carcomments.png" alt="" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">COMMENTS</h5>
-        <p class="card-text">Vehicle country location:  {{ car.info_cars.country_location }}</p>
-        <p class="card-text">Vehicle city location:     {{ car.info_cars.city_location }}</p>
-      </div>
-     </div>
     </div>
   </div>
-</div>
-</section>
+  </section>
 {% endblock %}
