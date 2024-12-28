@@ -10,21 +10,10 @@ class CarSearchWinForm(forms.Form):
         max_length=255,
         required=True,
         label="",
-        widget=forms.TextInput(attrs={
-            "placeholder": "Search by WIN"
-        })
+        widget=forms.TextInput(
+            attrs={"placeholder": "Search by WIN"}
+        ),
     )
-
-
-# class CarSearchCheckUp(forms.Form):
-#     performed_by = forms.CharField(
-#         max_length=255,
-#         required=True,
-#         label="",
-#         widget=forms.TextInput(attrs={
-#             "placeholder": "Search by Performed By"
-#         })
-#     )
 
 
 class CompanyCreationForm(UserCreationForm):
@@ -38,7 +27,9 @@ class CompanyCreationForm(UserCreationForm):
 
 def validate_win_code(win_code):
     if len(win_code) != 17 or not win_code.isalnum():
-        raise ValidationError("WIN Code must be 17 digits and Alphanumeric characters")
+        raise ValidationError(
+            "WIN Code must be 17 digits and Alphanumeric characters"
+        )
     return win_code
 
 
