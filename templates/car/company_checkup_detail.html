@@ -11,23 +11,22 @@
   </nav>
   <div class="butcheck">
     <div class="button">
-      <a class="btn btn-primary btn-bk" href="{% url "car:company-create" %}">CREATE NEW COMPANY</a>
+      <a class="btn btn-primary btn-bk" href="{% url "car:company-create" %}?company_pk={{ object.pk }}">CREATE NEW COMPANY</a>
     </div>
   </div>
   <br>
   <div class='container-fluid'>
-        <div class="card mx-auto col-md-3 col-10 mt-5 pt-4">
-            <div class="d-flex sale ">
-                <div class="btn">UPDATE</div>
-            </div>
-            <img class='mx-auto img-thumbnail'
-                src="/static/images/company1.png"
-                width="auto" height="auto"/>
-            <div class="card-body text-center mx-auto">
-                <h5 class="card-title">Company Name: {{ checkupcar.performed_by.first_name }}</h5>
-                <h5 class="card-title">Come from: {{ checkupcar.performed_by.country }}</h5>
-            </div>
-        </div>
-
+    <div class="card mx-auto col-md-3 col-10 mt-5 pt-4">
+      <div class="d-flex sale ">
+        <div class="btn"><a href="{% url "car:company-update" pk=checkupcar.performed_by.id %}">UPDATE</a></div>
+      </div>
+      <img class='mx-auto img-thumbnail'
+          src="/static/images/company1.png"
+          width="auto" height="auto"/>
+      <div class="card-body text-center mx-auto">
+        <h5 class="card-title">Company Name: {{ checkupcar.performed_by.first_name }}</h5>
+        <h5 class="card-title">Come from: {{ checkupcar.performed_by.country }}</h5>
+      </div>
     </div>
+  </div>
 {% endblock %}
