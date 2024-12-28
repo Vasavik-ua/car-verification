@@ -8,8 +8,7 @@ class Car(models.Model):
     year = models.IntegerField()
     win_code = models.CharField(max_length=255, unique=True)
     info_cars = models.OneToOneField(
-        "InfoCar", on_delete=models.CASCADE,
-        related_name="cars"
+        "InfoCar", on_delete=models.CASCADE, related_name="cars"
     )
 
 
@@ -24,9 +23,7 @@ class CarOwner(models.Model):
     country = models.CharField(max_length=255)
     email = models.EmailField(unique=True)
     info_owner = models.ForeignKey(
-        InfoCar,
-        on_delete=models.PROTECT,
-        related_name='owners'
+        InfoCar, on_delete=models.PROTECT, related_name="owners"
     )
 
 
@@ -37,16 +34,16 @@ class CompanyCheckUp(AbstractUser):
 
 class CheckUpCar(models.Model):
     data_of_execution = models.DateField()
-    kilometers = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+    kilometers = models.DecimalField(
+        max_digits=10,
+        decimal_places=2,
+        default=0
+    )
     body_state = models.CharField(max_length=255, blank=True)
     health_check = models.CharField(max_length=255, blank=True)
     info_checkup = models.ForeignKey(
-        InfoCar,
-        on_delete=models.CASCADE,
-        related_name="checkups"
+        InfoCar, on_delete=models.CASCADE, related_name="checkups"
     )
     performed_by = models.ForeignKey(
-        CompanyCheckUp,
-        on_delete=models.PROTECT,
-        related_name="company"
+        CompanyCheckUp, on_delete=models.PROTECT, related_name="company"
     )
