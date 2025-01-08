@@ -25,7 +25,7 @@ urlpatterns = [
     path("", index, name="index"),
     path("car/", CarListView.as_view(), name="car_list"),
     path("logout/", logout, name="logout"),
-    path("car/<int:pk>", CarDetailView.as_view(), name="car-detail"),
+    path("car/<int:pk>/", CarDetailView.as_view(), name="car-detail"),
     path("car/<int:pk>/update/", CarUpdateView.as_view(), name="car-update"),
     path("car/<int:pk>/delete/", CarDeleteView.as_view(), name="car-delete"),
     path("car/create/", CarCreateView.as_view(), name="car-create"),
@@ -49,7 +49,7 @@ urlpatterns = [
         name="checkup-delete",
     ),
     path(
-        "car/<int:pk>/owner",
+        "car/<int:pk>/owner/",
         CarOwnerDetailView.as_view(),
         name="car-owner-detail"),
     path(
@@ -67,7 +67,7 @@ urlpatterns = [
         name="owner-delete"
     ),
     path(
-        "car/checkup/company/<int:pk>",
+        "car/checkup/company/<int:pk>/",
         CompanyCheckUpDetailView.as_view(),
         name="company-detail",
     ),
