@@ -1,0 +1,164 @@
+[
+{
+    "model": "car.car",
+    "pk": 1,
+    "fields": {
+        "mark": "Volkswagen",
+        "model": "Golf",
+        "year": 2020,
+        "win_code": "11123ABC44",
+        "info_cars": 5
+    }
+},
+{
+    "model": "car.car",
+    "pk": 2,
+    "fields": {
+        "mark": "Honda",
+        "model": "Civic",
+        "year": 2021,
+        "win_code": "789XYZ123",
+        "info_cars": 2
+    }
+},
+{
+    "model": "car.car",
+    "pk": 3,
+    "fields": {
+        "mark": "Mercedes Benz",
+        "model": "B180",
+        "year": 2023,
+        "win_code": "213123HGKJHG",
+        "info_cars": 1
+    }
+},
+{
+    "model": "car.car",
+    "pk": 4,
+    "fields": {
+        "mark": "Mercedes Benz",
+        "model": "Vito",
+        "year": 2016,
+        "win_code": "343432kjk898",
+        "info_cars": 3
+    }
+},
+{
+    "model": "car.car",
+    "pk": 5,
+    "fields": {
+        "mark": "Toyota",
+        "model": "Camry",
+        "year": 2020,
+        "win_code": "3433hhhjk33",
+        "info_cars": 4
+    }
+},
+{
+    "model": "car.infocar",
+    "pk": 1,
+    "fields": {
+        "country_location": "USA",
+        "city_location": "New York"
+    }
+},
+{
+    "model": "car.infocar",
+    "pk": 2,
+    "fields": {
+        "country_location": "Germany",
+        "city_location": "Berlin"
+    }
+},
+{
+    "model": "car.infocar",
+    "pk": 3,
+    "fields": {
+        "country_location": "France",
+        "city_location": "Paris"
+    }
+},
+{
+    "model": "car.infocar",
+    "pk": 4,
+    "fields": {
+        "country_location": "Italy",
+        "city_location": "Rome"
+    }
+},
+{
+    "model": "car.infocar",
+    "pk": 5,
+    "fields": {
+        "country_location": "Canada",
+        "city_location": "Toronto"
+    }
+},
+{
+    "model": "car.infocar",
+    "pk": 6,
+    "fields": {
+        "country_location": "Ukraine",
+        "city_location": "Kyiv"
+    }
+},
+{
+    "model": "car.carowner",
+    "pk": 1,
+    "fields": {
+        "first_name": "Johnh",
+        "last_name": "Doe",
+        "country": "USA",
+        "email": "john.doe@example.com",
+        "info_owner": 1
+    }
+},
+{
+    "model": "car.carowner",
+    "pk": 2,
+    "fields": {
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "country": "Germany",
+        "email": "alice.smith@example.com",
+        "info_owner": 2
+    }
+},
+{
+    "model": "car.carowner",
+    "pk": 3,
+    "fields": {
+        "first_name": "Bob",
+        "last_name": "Brown",
+        "country": "France",
+        "email": "bob.brown@example.com",
+        "info_owner": 3
+    }
+},
+{
+    "model": "car.carowner",
+    "pk": 4,
+    "fields": {
+        "first_name": "Bob",
+        "last_name": "Bro",
+        "country": "France",
+        "email": "bob.bro@example.com",
+        "info_owner": 4
+    }
+},
+{
+    "model": "car.carowner",
+    "pk": 5,
+    "fields": {
+        "first_name": "Alice",
+        "last_name": "Brown",
+        "country": "Frances",
+        "email": "alice.brown@example.com",
+        "info_owner": 5
+    }
+},
+{
+    "model": "car.carowner",
+    "pk": 6,
+    "fields": {
+        "first_name": 

@@ -1,0 +1,232 @@
+[
+    {
+        "model": "car.infocar",
+        "pk": 1,
+        "fields": {
+            "country_location": "USA",
+            "city_location": "New York"
+        }
+    },
+    {
+        "model": "car.infocar",
+        "pk": 2,
+        "fields": {
+            "country_location": "Germany",
+            "city_location": "Berlin"
+        }
+    },
+    {
+        "model": "car.infocar",
+        "pk": 3,
+        "fields": {
+            "country_location": "France",
+            "city_location": "Paris"
+        }
+    },
+    {
+        "model": "car.infocar",
+        "pk": 4,
+        "fields": {
+            "country_location": "Italy",
+            "city_location": "Rome"
+        }
+    },
+    {
+        "model": "car.infocar",
+        "pk": 5,
+        "fields": {
+            "country_location": "Canada",
+            "city_location": "Toronto"
+        }
+    },
+    {
+        "model": "car.carowner",
+        "pk": 1,
+        "fields": {
+            "first_name": "John",
+            "last_name": "Doe",
+            "country": "USA",
+            "email": "john.doe@example.com",
+            "info_owner": 1
+        }
+    },
+    {
+        "model": "car.carowner",
+        "pk": 2,
+        "fields": {
+            "first_name": "Alice",
+            "last_name": "Smith",
+            "country": "Germany",
+            "email": "alice.smith@example.com",
+            "info_owner": 2
+        }
+    },
+    {
+        "model": "car.carowner",
+        "pk": 3,
+        "fields": {
+            "first_name": "Bob",
+            "last_name": "Brown",
+            "country": "France",
+            "email": "bob.brown@example.com",
+            "info_owner": 3
+        }
+    },
+    {
+        "model": "car.carowner",
+        "pk": 4,
+        "fields": {
+            "first_name": "Bob",
+            "last_name": "Bro",
+            "country": "France",
+            "email": "bob.bro@example.com",
+            "info_owner": 4
+        }
+    },
+    {
+        "model": "car.carowner",
+        "pk": 5,
+        "fields": {
+            "first_name": "Alice",
+            "last_name": "Brown",
+            "country": "France",
+            "email": "alice.brown@example.com",
+            "info_owner": 5
+        }
+    },
+    {
+        "model": "car.car",
+        "pk": 1,
+        "fields": {
+            "mark": "Toyota",
+            "model": "Camry",
+            "year": 2020,
+            "win_code": "123ABC456",
+            "info_cars": 1
+        }
+    },
+    {
+        "model": "car.car",
+        "pk": 2,
+        "fields": {
+            "mark": "Honda",
+            "model": "Civic",
+            "year": 2021,
+            "win_code": "789XYZ123",
+            "info_cars": 2
+        }
+    },
+    {
+        "model": "car.car",
+        "pk": 1,
+        "fields": {
+            "mark": "Mercede Benz",
+            "model": "B180",
+            "year": 2020,
+            "win_code": "123ABC45656",
+            "info_cars": 3
+        }
+    },
+    {
+        "model": "car.car",
+        "pk": 1,
+        "fields": {
+            "mark": "Mercedes Benza",
+            "model": "Vito",
+            "year": 2020,
+            "win_code": "12AA3ABC456",
+            "info_cars": 4
+        }
+    },
+    {
+        "model": "car.car",
+        "pk": 1,
+        "fields": {
+            "mark": "Volkswagen",
+            "model": "Golf",
+            "year": 2020,
+            "win_code": "11123ABC456",
+            "info_cars": 5
+        }
+    },
+    {
+        "model": "car.companycheckup",
+        "pk": 1,
+        "fields": {
+            "username": "company1",
+            "password": "pbkdf2_sha256$...$...",
+            "country": "USA",
+            "city": "New York"
+        }
+    },
+    {
+        "model": "car.companycheckup",
+        "pk": 2,
+        "fields": {
+            "username": "company2",
+            "password": "pbkdf2_sha256$...$..*",
+            "country": "USA",
+            "city": "New York"
+        }
+    },
+    {
+        "model": "car.checkupcar",
+        "pk": 1,
+        "fields": {
+            "data_of_execution": "2023-01-01",
+            "kilometers": 10000.00,
+            "body_state": "Good",
+            "health_check": "Passed",
+            "info_checkup": 1,
+            "performed_by": 1
+        }
+    },
+    {
+        "model": "car.checkupcar",
+        "pk": 2,
+        "fields": {
+            "data_of_execution": "2023-01-02",
+            "kilometers": 10000.00,
+            "body_state": "Good",
+            "health_check": "Ok",
+            "info_checkup": 2,
+            "performed_by": 2
+        }
+    },
+    {
+        "model": "car.checkupcar",
+        "pk": 3,
+        "fields": {
+            "data_of_execution": "2023-01-05",
+            "kilometers": 10000.00,
+            "body_state": "Poor",
+            "health_check": "Not Passed",
+            "info_checkup": 3,
+            "performed_by": 1
+        }
+    },
+    {
+        "model": "car.checkupcar",
+        "pk": 4,
+        "fields": {
+            "data_of_execution": "2023-05-01",
+            "kilometers": 100000.00,
+            "body_state": "Ok",
+            "health_check": "Passed",
+            "info_checkup": 4,
+            "performed_by": 2
+        }
+    },
+    {
+        "model": "car.checkupcar",
+        "pk": 5,
+        "fields": {
+            "data_of_execution": "2024-01-01",
+            "kilometers": 1000000.00,
+            "body_state": "Damaged",
+            "health_check": "Passed",
+            "info_checkup": 5,
+            "performed_by": 1
+        }
+    }
+]
