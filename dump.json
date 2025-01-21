@@ -161,4 +161,11 @@
     "model": "car.carowner",
     "pk": 6,
     "fields": {
-        "first_name": 
+        "first_name": "Vlad",
+        "last_name": "Dovbuch",
+        "country": "Ukraine",
+        "email": "vlad.dovbuch@example.com",
+        "info_owner": 6
+    }
+}
+]
