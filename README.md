@@ -6,8 +6,9 @@ This project models a comprehensive system to manage vehicle data, ownership det
 
 ### Initial Configuration
 
-Some projects require initial configuration (e.g. access tokens or keys, `npm i`).
-This is the section where you would document those requirements.
+To perform the check of functionality use this user:
+Username: User
+Password: User12345
 
 ## Developing
 
