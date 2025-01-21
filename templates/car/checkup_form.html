@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+  <h1 class="title-one">{{ object|yesno:"Update,Create" }} CheckUp</h1>
+  <nav class="bg-dark navbar-dark">
+    <div class="container">
+      <a href="" class="navbar-brand"></a>
+    </div>
+  </nav>
+  <form action="" method="post" novalidate>
+    {% csrf_token %}
+    {{ form|crispy }}
+
+    <input type="submit" value="Submit" class="btn btn-primary btn-bk">
+  </form>
+{% endblock %}

@@ -1,0 +1,146 @@
+body {
+     background-color: rgb(130, 194, 181);
+}
+.login-in{
+  background-color: #9ed8cb;
+}
+.title-one{
+  color: #315951;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+.title-two{
+  color: #315951;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.header-one{
+  padding: 80px;
+  font-family:'Roboto', sans-serif;
+}
+
+.home-link {
+    color: #315951;
+}
+
+div .jumbotron {
+    background: transparent;
+    font-family: 'Roboto', sans-serif;
+}
+/* Tabs*/
+section {
+    padding: 30px 0;
+}
+
+section .section-title {
+    text-align: center;
+    color: #101010;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+#tabs{
+	background: transparent;
+    color: #315951;
+}
+#tabs h6.section-title{
+    color: #315951;
+}
+
+#tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #315951;
+    background-color: transparent;
+    border-color: transparent transparent #315951;
+    border-bottom: 4px solid !important;
+    font-size: 20px;
+    font-weight: bold;
+}
+#tabs .nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    color: #315951;
+    font-size: 20px;
+}
+
+
+/* Center the form container */
+form {
+    background-color: #315951; /* White background */
+    border: 1px solid #dee2e6; /* Light border */
+    border-radius: 8px;
+    padding: 20px 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Styling for the heading */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333333;
+    text-align: center;
+}
+
+/* Yes button (delete confirmation) */
+.btn-danger {
+    display: inline-block;
+    background-color: #dc3545; /* Bootstrap danger red */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Button hover effects */
+.btn-danger:hover {
+    background-color: #b02a37; /* Darker red on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    form {
+        padding: 15px 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .btn-danger {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+.button {
+  display: inline-block;
+  background: #315951;
+  color: #82c2b5;
+  border-color: white;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 30px;
+  margin-left: 50px;
+    box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+.button:hover {
+  box-shadow: 0px 37px 20px -20px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translate(0px, -10px) scale(1.2);
+          transform: translate(0px, -10px) scale(1.2);
+}
+
+div .butcheck{
+    margin-top: 20px;
+}
