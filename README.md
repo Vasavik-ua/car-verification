@@ -7,8 +7,10 @@ This project models a comprehensive system to manage vehicle data, ownership det
 ### Initial Configuration
 
 To perform the check of functionality use this user:
+```
 Username: User
 Password: User12345
+```
 
 ## Developing
 
